@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container{
+    max-width: 400px;
+	height: auto;
+	background-color: silver;
+	padding: 20px;	
+}
+
+input, input[type="text"]{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.row-padding {
+	padding: 20px;
+}

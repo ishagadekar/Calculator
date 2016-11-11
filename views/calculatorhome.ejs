@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Calculator</title>
+<link href="images/favicon.jpg" rel="icon" type="image/x-icon" />
+<link rel='stylesheet' href='/stylesheets/style.css' />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script src = "angularjs/calculatorangular.js"></script>
+</head>
+
+<body ng-app = "calculator" ng-controller = "calculatorController">
+		
+<div class = "container">
+	<div class = "row">
+	<i class="col-md-3 fa fa-calculator fa-3x" aria-hidden="true"></i>
+		<h3 class="col-md-6">Calculator</h3>
+	</div>
+	<br>
+		<div class="form-group">
+			<input class="col-md-12" type="text" placeholder = "0" id="expression" ng-model='text'>
+		</div>
+		
+		<br>
+		<div class = "col-md-12">
+			<label style="color: red; font-size: 15px; margin-left: 20px;">{{message}}</label>
+		</div>
+							
+	<br><br>
+	<div class="row row-padding" ng-repeat="rows in chunkedData">
+   	 <div ng-repeat="item in rows">
+        <div class="clearfix" ng-if="$index % 4 == 0"></div>
+        	<button class="col-md-3" type="button" class="btn btn-secondary" ng-click = "enterTextAndCalculate(item)">{{item}}</button>
+     </div>
+	</div>
+
+</div>
+
+</body>
+
+</html>
